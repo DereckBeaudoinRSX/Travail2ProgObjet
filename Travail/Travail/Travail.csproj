@@ -83,6 +83,7 @@
       <DependentUpon>frmVoirProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="Panier.cs" />
+    <Compile Include="Produit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="controleProduit.resx">
