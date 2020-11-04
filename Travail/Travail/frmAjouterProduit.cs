@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Travail
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class frmAjouterProduit : Form
+    {
+        public frmAjouterProduit()
+        {
+            InitializeComponent();
+        }
+    }
 }
