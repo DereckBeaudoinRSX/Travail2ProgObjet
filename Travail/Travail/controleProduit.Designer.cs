@@ -28,72 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblProduit = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblPrix = new System.Windows.Forms.Label();
+            this.pctProduit = new System.Windows.Forms.PictureBox();
+            this.btnAjouter = new System.Windows.Forms.Button();
+            this.nudQuantite = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.pctProduit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantite)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblProduit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Produit";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblProduit.AutoSize = true;
+            this.lblProduit.Location = new System.Drawing.Point(137, 16);
+            this.lblProduit.Name = "lblProduit";
+            this.lblProduit.Size = new System.Drawing.Size(40, 13);
+            this.lblProduit.TabIndex = 0;
+            this.lblProduit.Text = "Produit";
+            this.lblProduit.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // lblDescription
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Description";
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(15, 39);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(60, 13);
+            this.lblDescription.TabIndex = 1;
+            this.lblDescription.Text = "Description";
             // 
-            // label3
+            // lblPrix
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(255, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Prix";
+            this.lblPrix.AutoSize = true;
+            this.lblPrix.Location = new System.Drawing.Point(255, 39);
+            this.lblPrix.Name = "lblPrix";
+            this.lblPrix.Size = new System.Drawing.Size(24, 13);
+            this.lblPrix.TabIndex = 2;
+            this.lblPrix.Text = "Prix";
             // 
-            // pictureBox1
+            // pctProduit
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(92, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 104);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pctProduit.Location = new System.Drawing.Point(92, 39);
+            this.pctProduit.Name = "pctProduit";
+            this.pctProduit.Size = new System.Drawing.Size(134, 104);
+            this.pctProduit.TabIndex = 3;
+            this.pctProduit.TabStop = false;
             // 
-            // button1
+            // btnAjouter
             // 
-            this.button1.Location = new System.Drawing.Point(123, 149);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAjouter.Location = new System.Drawing.Point(92, 175);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(134, 23);
+            this.btnAjouter.TabIndex = 4;
+            this.btnAjouter.Text = "Ajouter au panier";
+            this.btnAjouter.UseVisualStyleBackColor = true;
+            // 
+            // nudQuantite
+            // 
+            this.nudQuantite.Location = new System.Drawing.Point(92, 149);
+            this.nudQuantite.Name = "nudQuantite";
+            this.nudQuantite.Size = new System.Drawing.Size(134, 20);
+            this.nudQuantite.TabIndex = 5;
             // 
             // controleProduit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nudQuantite);
+            this.Controls.Add(this.btnAjouter);
+            this.Controls.Add(this.pctProduit);
+            this.Controls.Add(this.lblPrix);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.lblProduit);
             this.Name = "controleProduit";
-            this.Size = new System.Drawing.Size(329, 189);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(329, 206);
+            ((System.ComponentModel.ISupportInitialize)(this.pctProduit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantite)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,10 +112,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblProduit;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Label lblPrix;
+        private System.Windows.Forms.PictureBox pctProduit;
+        private System.Windows.Forms.Button btnAjouter;
+        private System.Windows.Forms.NumericUpDown nudQuantite;
     }
 }
