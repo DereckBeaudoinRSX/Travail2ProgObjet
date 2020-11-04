@@ -8,6 +8,20 @@ namespace Travail
 {
 	public class Panier
 	{
-		public List<Produit>;
+		public List<Produit> Cart;
+
+		public void AfficherPanier()
+		{
+
+		}
+
+
+
+		private void ToString()
+		{
+
+		} 
+
+
 	}
 }
