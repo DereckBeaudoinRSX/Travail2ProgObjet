@@ -12,7 +12,8 @@ namespace Travail
 {
 	public partial class frmMenu : Form
 	{
-		public frmMenu()
+        private IUtilisateurDAO utilisateurdao = new UtilisateurDAOCSV();
+        public frmMenu()
 		{
 			InitializeComponent();
 		}
@@ -32,12 +33,17 @@ namespace Travail
 
         private void voirProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirProfile());
+            CallForm(new frmVoirProfile(utilisateurdao));
         }
 
         private void ajouterProduitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CallForm(new frmAjouterProduit());
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            utilisateurdao.Ajouter();
         }
     }
 }

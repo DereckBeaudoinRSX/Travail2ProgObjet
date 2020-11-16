@@ -52,6 +52,9 @@
     <Compile Include="controleProduit.Designer.cs">
       <DependentUpon>controleProduit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Donnees\IUtilisateurDAO.cs" />
+    <Compile Include="Utilisateur.cs" />
+    <Compile Include="Donnees\UtilisateurDAOCSV.cs" />
     <Compile Include="frmAjouterProduit.cs">
       <SubType>Form</SubType>
     </Compile>
