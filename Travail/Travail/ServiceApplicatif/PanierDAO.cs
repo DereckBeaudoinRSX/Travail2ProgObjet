@@ -19,7 +19,7 @@ namespace Travail.ServiceApplicatif
 
             for (int i = 0; i < panier.Cart.Count; i++)
             {
-                produits.Add(panier.Cart[i]);
+                produits.Add(panier._cart[i]);
             }
 
             return produits;

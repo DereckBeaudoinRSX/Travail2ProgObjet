@@ -8,11 +8,15 @@ namespace Travail
 {
 	public class Panier
 	{
-        public List<Produit> Cart;
+		private IList<Produit> _cart { get; set; }
+		public Panier(IList<Produit> cart)
+		{
+			_cart = cart; 
+		}
 
 		public List<string> AfficherPanier()
 		{
-			return ToString(Cart);
+			return ToString(_cart);
 		}
 		
 		public double GetPrixTotal()
@@ -22,28 +26,34 @@ namespace Travail
 
 		public double GetPrixProduit(Produit item)
 		{
-            return Convert.ToDouble(item.Prix) * item.Quantite;
+			 return item._prix * 
 		}
+
+
 
 		private double CalculTotal()
 		{
 			double Resultat = 0; 
-			foreach (Produit item in Cart)
+			foreach (Produit item in _cart)
 			{
-				Resultat += (Convert.ToDouble(item.Prix) * item.Quantite);
+				Resultat = Resultat + (item.Prix * );  
 			}
 			return Math.Round(Resultat, 2); 
 		}
 
-		private List<string> ToString(List<Produit> Cart)
+		private List<string> ToString(IList<Produit> Cart)
 		{
 			List<string> Resultat = new List<string>(); 
 			foreach (Produit item in Cart)
 			{
-				Resultat.Add(item.Nom + " " +  item.Prix + "$ " + " " ); 
+				Resultat.Add(item.Numero + " " +  item.Nom + " " + item.Prix + " $" ); 
 			}
 			return Resultat;
-		} 
+		}
+		private string ToString(Produit item)
+		{
+			return item.Numero + " " + item.Nom + " " + item.Prix + " $";
+		}
 
 
 	}
