@@ -71,6 +71,7 @@
             this.pctProduit.Location = new System.Drawing.Point(92, 39);
             this.pctProduit.Name = "pctProduit";
             this.pctProduit.Size = new System.Drawing.Size(134, 104);
+            this.pctProduit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctProduit.TabIndex = 3;
             this.pctProduit.TabStop = false;
             // 
@@ -82,6 +83,7 @@
             this.btnAjouter.TabIndex = 4;
             this.btnAjouter.Text = "Ajouter au panier";
             this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // nudQuantite
             // 
