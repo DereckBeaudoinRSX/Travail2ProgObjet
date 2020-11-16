@@ -26,7 +26,7 @@ namespace Travail
 
 		public double GetPrixProduit(Produit item)
 		{
-			 return item._prix * 
+			return Convert.ToDouble(item.Prix) * item.Quantite; 
 		}
 
 
@@ -36,7 +36,8 @@ namespace Travail
 			double Resultat = 0; 
 			foreach (Produit item in _cart)
 			{
-				Resultat = Resultat + (item.Prix * );  
+				
+				Resultat = Resultat + (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));  
 			}
 			return Math.Round(Resultat, 2); 
 		}
