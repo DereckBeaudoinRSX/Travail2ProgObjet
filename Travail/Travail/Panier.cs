@@ -8,22 +8,16 @@ namespace Travail
 {
 	public class Panier
 	{
-<<<<<<< HEAD
 
 		public List<Produit> Cart;
-=======
+
 		public IList<Produit> _cart { get; set; }
 
 		public Panier(IList<Produit> cart)
 		{
 			_cart = cart; 
 		}
->>>>>>> Fichier-Random
 
-        public Panier()
-        {
-            _cart = new List<Produit>();
-        }
 
 		public List<string> AfficherPanier()
 		{
