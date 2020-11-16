@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Travail.Donnees;
 
 namespace Travail
 {
@@ -44,6 +45,11 @@ namespace Travail
         private void frmMenu_Load(object sender, EventArgs e)
         {
             utilisateurdao.Ajouter();
+            IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
+            if (utilisateurs[0].Role == "Client")
+            {
+                ajouterProduitToolStripMenuItem.Visible = false;
+            }
         }
     }
 }
