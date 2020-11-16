@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Travail.ServiceApplicatif
 {
-    class PanierDAO : IPanierDAO
+    public class PanierDAO : IPanierDAO
     {
         public void Ajouter(Panier panier, Produit produit)
         {
@@ -25,4 +25,5 @@ namespace Travail.ServiceApplicatif
             return produits;
         }
     }
+
 }

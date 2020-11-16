@@ -33,6 +33,15 @@ namespace Travail
 
 		private double CalculTotal(Utilisateur utilisateur)
 		{
+			double Resultat = 0;
+			foreach (Produit item in _cart)
+			{
+				Resultat = Resultat + (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));
+			}
+			return Math.Round(Resultat, 2) * CalculTaxe(utilisateur);
+		}
+		private double CalculTaxe(Utilisateur utilisateur)
+		{
 			double taxe;
 			if (utilisateur.Provenance == "Canada")
 			{
@@ -42,15 +51,8 @@ namespace Travail
 			{
 				taxe = 1.07;
 			}
-			double Resultat = 0;
-			foreach (Produit item in _cart)
-			{
-
-				Resultat = Resultat + (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));
-			}
-			return Math.Round(Resultat, 2) * taxe;
+			return taxe;
 		}
-
 
 		private List<string> ToString(IList<Produit> Cart)
 		{
@@ -64,7 +66,15 @@ namespace Travail
 		private string ToString(Produit item)
 		{
 			return item.Numero + " " + item.Nom + " " + item.Prix + " $";
-
+		}
+		private string GetSousTotalTaxe(Utilisateur utilisateur)
+		{
+			double Resultat = 0;
+			foreach (Produit item in _cart)
+			{
+				Resultat = Resultat + (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));
+			}
+			return (CalculTotal(utilisateur) - GetPrixTotal(utilisateur)).ToString();
 		}
 	}
 }

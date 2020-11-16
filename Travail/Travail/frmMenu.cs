@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Travail;
+using Travail.ServiceApplicatif;
 
 namespace Travail
 {
@@ -15,6 +16,7 @@ namespace Travail
 	{
         private IUtilisateurDAO utilisateurdao = new UtilisateurDAOCSV();
         private IProduitDAO produitDAO = new ProduitDAOCSV();
+        private IPanierDAO panierDAO = new PanierDAO(); 
         public frmMenu()
 		{
 			InitializeComponent();
@@ -30,7 +32,7 @@ namespace Travail
 
         private void voirPanierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirPanier());
+            CallForm(new frmVoirPanier(panierDAO));
         }
 
         private void voirProfileToolStripMenuItem_Click(object sender, EventArgs e)

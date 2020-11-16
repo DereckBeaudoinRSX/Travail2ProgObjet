@@ -7,14 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Travail.ServiceApplicatif;
 
 namespace Travail
 {
     public partial class frmVoirPanier : Form
     {
-        public frmVoirPanier()
+        private PanierDAO panierDAO { get; }
+        public frmVoirPanier(PanierDAO panierDAO)
         {
             InitializeComponent();
+        }
+
+        private void frmVoirPanier_Load(object sender, EventArgs e)
+        {
+            IList<Produit> items = panierDAO.GetAll(panier);
+            Panier panier = new Panier(items); 
+            
+            foreach (Produit item in items)
+            {
+                lstProduits.Items.Add(items.ToString(item)); 
+            }
         }
     }
 }
