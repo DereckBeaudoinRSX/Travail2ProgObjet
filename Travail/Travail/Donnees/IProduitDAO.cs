@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Travail
 {
-    interface IProduitDAO
+    public interface IProduitDAO
     {
         void Ajouter(Produit produit);
         IList<Produit> GetAll();
