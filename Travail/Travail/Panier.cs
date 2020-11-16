@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-<<<<<<< HEAD
 
-=======
 using Travail;
->>>>>>> 749a786e0d7aa8c5f798ed91590d8d987a089b88
+
 
 namespace Travail
 {
@@ -35,13 +33,8 @@ namespace Travail
 			return Convert.ToDouble(item.Prix) * item.Quantite;
 		}
 
-<<<<<<< HEAD
-		private double CalculTotal()
-=======
-
-
 		private double CalculTotal(Utilisateur utilisateur)
->>>>>>> 6cade7adad59debbf2b5e04b5c8a9eee2efa91b7
+
 		{
 			double taxe;
 			if (utilisateur.Provenance == "Canada")
