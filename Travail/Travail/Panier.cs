@@ -14,6 +14,7 @@ namespace Travail
 	public class Panier
 	{
 		public IList<Produit> _cart { get; set; }
+
 		public Panier(IList<Produit> cart)
 		{
 			_cart = cart;
@@ -34,9 +35,13 @@ namespace Travail
 			return Convert.ToDouble(item.Prix) * item.Quantite;
 		}
 
+<<<<<<< HEAD
+		private double CalculTotal()
+=======
 
 
 		private double CalculTotal(Utilisateur utilisateur)
+>>>>>>> 6cade7adad59debbf2b5e04b5c8a9eee2efa91b7
 		{
 			double taxe;
 			if (utilisateur.Provenance == "Canada")
@@ -71,7 +76,5 @@ namespace Travail
 			return item.Numero + " " + item.Nom + " " + item.Prix + " $";
 
 		}
-
-
 	}
 }
