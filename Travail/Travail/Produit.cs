@@ -12,13 +12,15 @@ namespace Travail
         public string Nom { get; }
         public string Description { get; }
         public decimal Prix { get; }
+        public int Quantite { get; }
 
-        public Produit(int numero, string nom, string description, decimal prix)
+        public Produit(int numero, string nom, string description, decimal prix, int quantite)
         {
             Numero = numero;
             Nom = nom;
             Description = description;
             Prix = prix;
+            Quantite = quantite;
         }
 
         public Produit(Produit produit)
@@ -27,6 +29,7 @@ namespace Travail
             Nom = produit.Nom;
             Description = produit.Description;
             Prix = produit.Prix;
+            Quantite = produit.Quantite;
         }
     }
 }

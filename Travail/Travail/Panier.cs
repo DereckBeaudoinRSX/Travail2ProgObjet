@@ -22,17 +22,15 @@ namespace Travail
 
 		public double GetPrixProduit(Produit item)
 		{
-			 return item._prix * 
+            return Convert.ToDouble(item.Prix) * item.Quantite;
 		}
-
-
 
 		private double CalculTotal()
 		{
 			double Resultat = 0; 
 			foreach (Produit item in Cart)
 			{
-				Resultat = Resultat + (item._prix * );  
+				Resultat += (Convert.ToDouble(item.Prix) * item.Quantite);
 			}
 			return Math.Round(Resultat, 2); 
 		}
@@ -42,7 +40,7 @@ namespace Travail
 			List<string> Resultat = new List<string>(); 
 			foreach (Produit item in Cart)
 			{
-				Resultat.Add(item._nom + " " +  item._prix + "$ " + " " ); 
+				Resultat.Add(item.Nom + " " +  item.Prix + "$ " + " " ); 
 			}
 			return Resultat;
 		} 
