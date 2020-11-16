@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+
+=======
 using Travail;
+>>>>>>> 749a786e0d7aa8c5f798ed91590d8d987a089b88
 
 namespace Travail
 {
 	public class Panier
 	{
 		public IList<Produit> _cart { get; set; }
+
 		public Panier(IList<Produit> cart)
 		{
 			_cart = cart;
@@ -30,18 +35,16 @@ namespace Travail
 			return Convert.ToDouble(item.Prix) * item.Quantite;
 		}
 
-
-
 		private double CalculTotal(Utilisateur utilisateur)
 		{
 			double taxe;
 			if (utilisateur.Provenance == "Canada")
 			{
-				taxe = 0.15;
+				taxe = 1.15;
 			}
 			else
 			{
-				taxe = 0.07;
+				taxe = 1.07;
 			}
 			double Resultat = 0;
 			foreach (Produit item in _cart)
@@ -67,7 +70,5 @@ namespace Travail
 			return item.Numero + " " + item.Nom + " " + item.Prix + " $";
 
 		}
-
-
 	}
 }
