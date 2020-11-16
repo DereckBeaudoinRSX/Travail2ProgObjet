@@ -17,7 +17,7 @@ namespace Travail
             {
                 string ligne = "JeanNezPleinlCasque" + ";" +
                                "Administrateur" + ";" +
-                               "Canada";
+                               "Canada" + ";";
                 writer.WriteLine(ligne);
             }
         }
