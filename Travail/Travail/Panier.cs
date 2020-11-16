@@ -34,10 +34,6 @@ namespace Travail
 		}
 
 		private double CalculTotal(Utilisateur utilisateur)
-<<<<<<< HEAD
-
-=======
->>>>>>> 0b90b96dc0b7c70990f0db9619411888e8efabee
 		{
 			double taxe;
 			if (utilisateur.Provenance == "Canada")
