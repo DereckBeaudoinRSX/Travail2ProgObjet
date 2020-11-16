@@ -56,7 +56,7 @@ namespace Travail
 
             File.WriteAllText(CheminCSV, "");
 
-            using (StreamWriter writer = new StreamWriter(CheminCSV, true))
+            using (StreamWriter writer = new StreamWriter(CheminCSV, false))
             {
                 foreach (Utilisateur utilisateur in utilisateurs)
                 {
