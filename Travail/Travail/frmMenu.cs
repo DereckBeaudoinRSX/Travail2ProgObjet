@@ -30,28 +30,26 @@ namespace Travail
         {
             try
             {
-                CallForm(new frmVoirProduits());
+                CallForm(new frmVoirProduits(produitDAO));
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
-            CallForm(new frmVoirProduits(produitDAO));
         }
 
         private void voirPanierToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                CallForm(new frmVoirPanier());
+                CallForm(new frmVoirPanier(panierDAO));
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
             }
-            CallForm(new frmVoirPanier(panierDAO));
         }
 
         private void voirProfileToolStripMenuItem_Click(object sender, EventArgs e)

@@ -22,9 +22,12 @@ namespace Travail
 
         private void frmVoirProduits_Load(object sender, EventArgs e)
         {
-            foreach(var produit in produitDAO.GetAll())
+            IList<Produit> produits = produitDAO.GetAll();
+
+            for(int i = 0; i < produits.Count(); i++)
             {
-                LstProduits.Items.Add(produit.Nom + " - " + produit.Description + " - " + produit.Prix + "$");
+                Control control = new controleProduit(produits[i]);
+                flowLayoutPanelProduit.Controls.Add(control);
             }
         }
     }
