@@ -54,6 +54,7 @@ namespace Travail
 		private string ToString(Produit item)
 		{
 			return item.Numero + " " + item.Nom + " " + item.Prix + " $";
+
 		}
 
 
