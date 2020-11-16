@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Travail.Donnees; 
+using Travail.Donnees;
 
 namespace Travail
 {
@@ -34,7 +34,7 @@ namespace Travail
 
 		private double CalculTotal(Utilisateur utilisateur)
 		{
-			double taxe; 
+			double taxe;
 			if (utilisateur.Provenance == "Canada")
 			{
 				taxe = 0.15;
@@ -49,7 +49,7 @@ namespace Travail
 
 				Resultat = Resultat + (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));
 			}
-			return Math.Round(Resultat, 2)*taxe;
+			return Math.Round(Resultat, 2) * taxe;
 		}
 
 
