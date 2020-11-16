@@ -25,22 +25,54 @@ namespace Travail
         }
         private void voirProduitsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirProduits());
+            try
+            {
+                CallForm(new frmVoirProduits());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void voirPanierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirPanier());
+            try
+            {
+                CallForm(new frmVoirPanier());
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void voirProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirProfile(utilisateurdao));
+            try
+            {
+                CallForm(new frmVoirProfile(utilisateurdao));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ajouterProduitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmAjouterProduit(produitDAO));
+            try
+            {
+                CallForm(new frmAjouterProduit(produitDAO));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
