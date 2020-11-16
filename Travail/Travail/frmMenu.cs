@@ -17,6 +17,11 @@ namespace Travail
         private IUtilisateurDAO utilisateurdao = new UtilisateurDAOCSV();
         private IProduitDAO produitDAO = new ProduitDAOCSV();
         private IPanierDAO panierDAO = new PanierDAO(); 
+        private IPanierDAO panierDAO = new PanierDAO();
+
+        private static IList<Produit> produits = new List<Produit>();
+        public Panier panier = new Panier(produits);
+
         public frmMenu()
 		{
 			InitializeComponent();
