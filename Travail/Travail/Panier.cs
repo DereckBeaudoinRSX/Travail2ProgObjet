@@ -36,11 +36,11 @@ namespace Travail
 			double taxe;
 			if (utilisateur.Provenance == "Canada")
 			{
-				taxe = 0.15;
+				taxe = 1.15;
 			}
 			else
 			{
-				taxe = 0.07;
+				taxe = 1.07;
 			}
 			double Resultat = 0;
 			foreach (Produit item in _cart)
