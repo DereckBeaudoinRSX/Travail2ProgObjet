@@ -13,3 +13,14 @@ C:\Users\jeremy\Desktop\Travail2\Travail\Travail\obj\Debug\Travail.frmAjouterPro
 C:\Users\jeremy\Desktop\Travail2\Travail\Travail\obj\Debug\Travail.frmVoirPanier.resources
 C:\Users\jeremy\Desktop\Travail2\Travail\Travail\obj\Debug\Travail.frmVoirProduits.resources
 C:\Users\jeremy\Desktop\Travail2\Travail\Travail\obj\Debug\Travail.frmVoirProfile.resources
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.csprojAssemblyReference.cache
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.controleProduit.resources
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.frmAjouterProduit.resources
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.frmMenu.resources
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.frmVoirPanier.resources
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.frmVoirProduits.resources
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.frmVoirProfile.resources
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.Properties.Resources.resources
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.csproj.GenerateResource.cache
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.exe
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.pdb
