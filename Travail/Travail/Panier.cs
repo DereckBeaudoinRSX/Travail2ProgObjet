@@ -8,8 +8,7 @@ namespace Travail
 {
 	public class Panier
 	{
-
-		public List<Produit> Cart;
+        public List<Produit> Cart;
 
 		public List<string> AfficherPanier()
 		{

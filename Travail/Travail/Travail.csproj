@@ -88,6 +88,8 @@
     <Compile Include="Donnees\ProduitDAOCSV.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceApplicatif\IPanierDAO.cs" />
+    <Compile Include="ServiceApplicatif\PanierDAO.cs" />
     <EmbeddedResource Include="controleProduit.resx">
       <DependentUpon>controleProduit.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,5 +130,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
