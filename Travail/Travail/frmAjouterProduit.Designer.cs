@@ -35,25 +35,27 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAjouterProduit = new System.Windows.Forms.Button();
+            this.LblNumeroDeProduit = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(12, 28);
+            this.txtNom.Location = new System.Drawing.Point(111, 32);
             this.txtNom.Name = "txtNom";
             this.txtNom.Size = new System.Drawing.Size(100, 20);
             this.txtNom.TabIndex = 0;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(118, 28);
+            this.txtDescription.Location = new System.Drawing.Point(217, 32);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(100, 20);
             this.txtDescription.TabIndex = 1;
             // 
             // txtPrix
             // 
-            this.txtPrix.Location = new System.Drawing.Point(224, 28);
+            this.txtPrix.Location = new System.Drawing.Point(323, 32);
             this.txtPrix.Name = "txtPrix";
             this.txtPrix.Size = new System.Drawing.Size(100, 20);
             this.txtPrix.TabIndex = 2;
@@ -61,7 +63,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(111, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 4;
@@ -70,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(115, 9);
+            this.label2.Location = new System.Drawing.Point(214, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 5;
@@ -79,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(221, 9);
+            this.label3.Location = new System.Drawing.Point(320, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 6;
@@ -87,18 +89,38 @@
             // 
             // btnAjouterProduit
             // 
-            this.btnAjouterProduit.Location = new System.Drawing.Point(12, 54);
+            this.btnAjouterProduit.Location = new System.Drawing.Point(5, 58);
             this.btnAjouterProduit.Name = "btnAjouterProduit";
-            this.btnAjouterProduit.Size = new System.Drawing.Size(312, 23);
+            this.btnAjouterProduit.Size = new System.Drawing.Size(418, 23);
             this.btnAjouterProduit.TabIndex = 7;
             this.btnAjouterProduit.Text = "Ajouter produit";
             this.btnAjouterProduit.UseVisualStyleBackColor = true;
+            this.btnAjouterProduit.Click += new System.EventHandler(this.btnAjouterProduit_Click);
+            // 
+            // LblNumeroDeProduit
+            // 
+            this.LblNumeroDeProduit.AutoSize = true;
+            this.LblNumeroDeProduit.Location = new System.Drawing.Point(2, 13);
+            this.LblNumeroDeProduit.Name = "LblNumeroDeProduit";
+            this.LblNumeroDeProduit.Size = new System.Drawing.Size(95, 13);
+            this.LblNumeroDeProduit.TabIndex = 8;
+            this.LblNumeroDeProduit.Text = "Numero de Produit";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Location = new System.Drawing.Point(5, 32);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.TabIndex = 9;
             // 
             // frmAjouterProduit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 104);
+            this.ClientSize = new System.Drawing.Size(457, 104);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.LblNumeroDeProduit);
             this.Controls.Add(this.btnAjouterProduit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -108,6 +130,7 @@
             this.Controls.Add(this.txtNom);
             this.Name = "frmAjouterProduit";
             this.Text = "frmAjouterProduit";
+            this.Load += new System.EventHandler(this.frmAjouterProduit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +145,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAjouterProduit;
+        private System.Windows.Forms.Label LblNumeroDeProduit;
+        private System.Windows.Forms.TextBox txtNumero;
     }
 }
