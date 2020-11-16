@@ -10,14 +10,14 @@ namespace Travail.ServiceApplicatif
     {
         public void Ajouter(Panier panier, Produit produit)
         {
-            panier.Cart.Add(produit);
+            panier._cart.Add(produit);
         }
 
         public IList<Produit> GetAll(Panier panier)
         {
             IList<Produit> produits = new List<Produit>();
 
-            for (int i = 0; i < panier.Cart.Count; i++)
+            for (int i = 0; i < panier._cart.Count; i++)
             {
                 produits.Add(panier._cart[i]);
             }

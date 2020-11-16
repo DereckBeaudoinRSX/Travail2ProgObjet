@@ -8,11 +8,17 @@ namespace Travail
 {
 	public class Panier
 	{
-		private IList<Produit> _cart { get; set; }
+		public IList<Produit> _cart { get; set; }
+
 		public Panier(IList<Produit> cart)
 		{
 			_cart = cart; 
 		}
+
+        public Panier()
+        {
+            _cart = new List<Produit>();
+        }
 
 		public List<string> AfficherPanier()
 		{
