@@ -34,16 +34,19 @@ namespace Travail
 		}
 
 		private double CalculTotal(Utilisateur utilisateur)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0b90b96dc0b7c70990f0db9619411888e8efabee
 		{
 			double taxe;
 			if (utilisateur.Provenance == "Canada")
 			{
-				taxe = 0.15;
+				taxe = 1.15;
 			}
 			else
 			{
-				taxe = 0.07;
+				taxe = 1.07;
 			}
 			double Resultat = 0;
 			foreach (Produit item in _cart)

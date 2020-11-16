@@ -14,6 +14,7 @@ namespace Travail
 	public partial class frmMenu : Form
 	{
         private IUtilisateurDAO utilisateurdao = new UtilisateurDAOCSV();
+        private IProduitDAO produitDAO = new ProduitDAOCSV();
         public frmMenu()
 		{
 			InitializeComponent();
@@ -39,7 +40,7 @@ namespace Travail
 
         private void ajouterProduitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmAjouterProduit());
+            CallForm(new frmAjouterProduit(produitDAO));
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
