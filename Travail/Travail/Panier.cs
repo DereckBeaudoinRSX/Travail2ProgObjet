@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 
+=======
+using Travail;
+>>>>>>> 749a786e0d7aa8c5f798ed91590d8d987a089b88
 
 namespace Travail
 {
