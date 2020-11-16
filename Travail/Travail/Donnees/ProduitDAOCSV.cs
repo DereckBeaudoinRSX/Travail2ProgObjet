@@ -46,6 +46,33 @@ namespace Travail
             return produits;
         }
 
+        public void Modifier(Produit produitAModifier)
+        {
+            IList<Produit> produits = GetAll();
+
+            for (int i = 0; i < produits.Count; i++)
+            {
+                if(produitAModifier.Numero == produits[i].Numero)
+                {
+                    produits[i] = new Produit(produitAModifier);
+                }
+            }
+
+            File.WriteAllText(CheminCSV, "");
+
+            using(StreamWriter writer = new StreamWriter(CheminCSV, true))
+            {
+                foreach(Produit produit in produits)
+                {
+                    string ligne = produit.Numero + ";" +
+                                   produit.Nom + ";" +
+                                   produit.Description + ";" +
+                                   produit.Prix;
+                    writer.WriteLine(ligne);
+                }
+            }
+        }
+
         public Produit Obtenir(int numero)
         {
             IList<Produit> produits = GetAll();

@@ -53,7 +53,6 @@
       <DependentUpon>controleProduit.cs</DependentUpon>
     </Compile>
     <Compile Include="Donnees\IUtilisateurDAO.cs" />
-    <Compile Include="Donnees\ProduitDAOMemoire.cs" />
     <Compile Include="Utilisateur.cs" />
     <Compile Include="Donnees\UtilisateurDAOCSV.cs" />
     <Compile Include="frmAjouterProduit.cs">
@@ -134,8 +133,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

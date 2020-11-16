@@ -10,6 +10,7 @@ namespace Travail
     {
         void Ajouter(Produit produit);
         IList<Produit> GetAll();
+        void Modifier(Produit produit);
         Produit Obtenir(int numero);
     }
 }
