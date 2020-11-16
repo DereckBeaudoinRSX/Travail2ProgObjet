@@ -18,7 +18,8 @@ namespace Travail
                 string ligne = produitAAjouter.Numero + ";" +
                                produitAAjouter.Nom + ";" +
                                produitAAjouter.Description + ";" +
-                               produitAAjouter.Prix;
+                               produitAAjouter.Prix + ";" + 
+                               produitAAjouter.Quantite;
                 writer.WriteLine(ligne);
             }
         }
@@ -38,8 +39,9 @@ namespace Travail
                     string nom = morceaux[1];
                     string description = morceaux[2];
                     decimal prix = decimal.Parse(morceaux[3]);
+                    int quantite = int.Parse(morceaux[4]);
 
-                    Produit produit = new Produit(numero, nom, description, prix);
+                    Produit produit = new Produit(numero, nom, description, prix, quantite);
                     produits.Add(produit);
                 }
             }
