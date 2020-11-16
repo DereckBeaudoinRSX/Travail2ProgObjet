@@ -53,6 +53,7 @@
             this.btnClient.TabIndex = 1;
             this.btnClient.Text = "Client";
             this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnAdministrateur
             // 
@@ -62,6 +63,7 @@
             this.btnAdministrateur.TabIndex = 2;
             this.btnAdministrateur.Text = "Administrateur";
             this.btnAdministrateur.UseVisualStyleBackColor = true;
+            this.btnAdministrateur.Click += new System.EventHandler(this.btnAdministrateur_Click);
             // 
             // btnCanada
             // 
@@ -71,6 +73,7 @@
             this.btnCanada.TabIndex = 3;
             this.btnCanada.Text = "CAD";
             this.btnCanada.UseVisualStyleBackColor = true;
+            this.btnCanada.Click += new System.EventHandler(this.btnCanada_Click);
             // 
             // btnUSA
             // 
@@ -80,6 +83,7 @@
             this.btnUSA.TabIndex = 4;
             this.btnUSA.Text = "USA";
             this.btnUSA.UseVisualStyleBackColor = true;
+            this.btnUSA.Click += new System.EventHandler(this.btnUSA_Click);
             // 
             // label2
             // 
