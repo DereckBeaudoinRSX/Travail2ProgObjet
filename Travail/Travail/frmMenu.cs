@@ -27,7 +27,15 @@ namespace Travail
         }
         private void voirProduitsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirProduits());
+            try
+            {
+                CallForm(new frmVoirProduits(produitDAO));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void voirPanierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,18 +45,35 @@ namespace Travail
 
         private void voirProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirProfile(utilisateurdao));
+            try
+            {
+                CallForm(new frmVoirProfile(utilisateurdao));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ajouterProduitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmAjouterProduit(produitDAO));
+            try
+            {
+                CallForm(new frmAjouterProduit(produitDAO));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
             refresh();
         }
+
         private void refresh()
         {
             IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
@@ -60,15 +85,6 @@ namespace Travail
             {
                 ajouterProduitToolStripMenuItem.Visible = true;
             }
-        }
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)

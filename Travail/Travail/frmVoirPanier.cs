@@ -17,6 +17,12 @@ namespace Travail
         public frmVoirPanier(PanierDAO panierDAO)
         {
             InitializeComponent();
+            this.panierDAO = panierDAO;
+        }
+
+        private void frmVoirPanier_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void frmVoirPanier_Load(object sender, EventArgs e)
