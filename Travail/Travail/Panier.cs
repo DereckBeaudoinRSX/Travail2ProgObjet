@@ -9,6 +9,7 @@ namespace Travail
 	public class Panier
 	{
 		public IList<Produit> _cart { get; set; }
+
 		public Panier(IList<Produit> cart)
 		{
 			_cart = cart;
@@ -28,8 +29,6 @@ namespace Travail
 		{
 			return Convert.ToDouble(item.Prix) * item.Quantite;
 		}
-
-
 
 		private double CalculTotal()
 		{
@@ -56,7 +55,5 @@ namespace Travail
 			return item.Numero + " " + item.Nom + " " + item.Prix + " $";
 
 		}
-
-
 	}
 }
