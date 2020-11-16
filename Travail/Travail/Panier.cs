@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Travail.Donnees; 
 
 namespace Travail
 {
@@ -20,9 +21,9 @@ namespace Travail
 			return ToString(_cart);
 		}
 
-		public double GetPrixTotal()
+		public double GetPrixTotal(Utilisateur utilisateur)
 		{
-			return CalculTotal();
+			return CalculTotal(utilisateur);
 		}
 
 		public double GetPrixProduit(Produit item)
@@ -30,16 +31,32 @@ namespace Travail
 			return Convert.ToDouble(item.Prix) * item.Quantite;
 		}
 
+<<<<<<< HEAD
 		private double CalculTotal()
+=======
+
+
+		private double CalculTotal(Utilisateur utilisateur)
+>>>>>>> 6cade7adad59debbf2b5e04b5c8a9eee2efa91b7
 		{
+			double taxe; 
+			if (utilisateur.Provenance == "Canada")
+			{
+				taxe = 0.15;
+			}
+			else
+			{
+				taxe = 0.07;
+			}
 			double Resultat = 0;
 			foreach (Produit item in _cart)
 			{
 
 				Resultat = Resultat + (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));
 			}
-			return Math.Round(Resultat, 2);
+			return Math.Round(Resultat, 2)*taxe;
 		}
+
 
 		private List<string> ToString(IList<Produit> Cart)
 		{

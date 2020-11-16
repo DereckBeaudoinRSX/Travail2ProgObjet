@@ -24,6 +24,7 @@ C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Trav
 C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.csproj.GenerateResource.cache
 C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.exe
 C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\obj\Debug\Travail.pdb
+<<<<<<< HEAD
 C:\Users\P-O\Desktop\Travail2\Travail\Travail\bin\Debug\Travail.exe.config
 C:\Users\P-O\Desktop\Travail2\Travail\Travail\bin\Debug\Travail.exe
 C:\Users\P-O\Desktop\Travail2\Travail\Travail\bin\Debug\Travail.pdb
@@ -38,3 +39,8 @@ C:\Users\P-O\Desktop\Travail2\Travail\Travail\obj\Debug\Travail.Properties.Resou
 C:\Users\P-O\Desktop\Travail2\Travail\Travail\obj\Debug\Travail.csproj.GenerateResource.cache
 C:\Users\P-O\Desktop\Travail2\Travail\Travail\obj\Debug\Travail.exe
 C:\Users\P-O\Desktop\Travail2\Travail\Travail\obj\Debug\Travail.pdb
+=======
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\bin\Debug\Travail.exe.config
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\bin\Debug\Travail.exe
+C:\Users\Derec\Documents\GitHub\Travail2ProgObjet\Travail\Travail\bin\Debug\Travail.pdb
+>>>>>>> 6cade7adad59debbf2b5e04b5c8a9eee2efa91b7
