@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Travail.Donnees;
+using Travail;
 
 namespace Travail
 {
