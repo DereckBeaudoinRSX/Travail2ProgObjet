@@ -12,9 +12,20 @@ namespace Travail
 {
     public partial class frmVoirProduits : Form
     {
-        public frmVoirProduits()
+        private IProduitDAO produitDAO;
+
+        public frmVoirProduits(IProduitDAO produitDAO)
         {
             InitializeComponent();
+            this.produitDAO = produitDAO;
+        }
+
+        private void frmVoirProduits_Load(object sender, EventArgs e)
+        {
+            foreach(var produit in produitDAO.GetAll())
+            {
+                LstProduits.Items.Add(produit.Nom + " - " + produit.Description + " - " + produit.Prix + "$");
+            }
         }
     }
 }

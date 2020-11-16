@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Travail;
+using Travail.ServiceApplicatif;
 
 namespace Travail
 {
@@ -15,6 +16,8 @@ namespace Travail
 	{
         private IUtilisateurDAO utilisateurdao = new UtilisateurDAOCSV();
         private IProduitDAO produitDAO = new ProduitDAOCSV();
+        private IPanierDAO panierDAO = new PanierDAO();
+
         public frmMenu()
 		{
 			InitializeComponent();
@@ -25,12 +28,12 @@ namespace Travail
         }
         private void voirProduitsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirProduits());
+            CallForm(new frmVoirProduits(produitDAO));
         }
 
         private void voirPanierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CallForm(new frmVoirPanier());
+            CallForm(new frmVoirPanier(panierDAO));
         }
 
         private void voirProfileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,6 +50,7 @@ namespace Travail
         {
             refresh();
         }
+
         private void refresh()
         {
             IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
@@ -58,15 +62,6 @@ namespace Travail
             {
                 ajouterProduitToolStripMenuItem.Visible = true;
             }
-        }
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)

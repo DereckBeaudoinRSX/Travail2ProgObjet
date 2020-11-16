@@ -53,6 +53,7 @@
       <DependentUpon>controleProduit.cs</DependentUpon>
     </Compile>
     <Compile Include="Donnees\IUtilisateurDAO.cs" />
+    <Compile Include="Donnees\ProduitDAOMemoire.cs" />
     <Compile Include="Utilisateur.cs" />
     <Compile Include="Donnees\UtilisateurDAOCSV.cs" />
     <Compile Include="frmAjouterProduit.cs">

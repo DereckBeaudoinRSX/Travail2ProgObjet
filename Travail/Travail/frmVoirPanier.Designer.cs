@@ -69,6 +69,7 @@
             this.Controls.Add(this.lstProduits);
             this.Name = "frmVoirPanier";
             this.Text = "frmVoirPanier";
+            this.Load += new System.EventHandler(this.frmVoirPanier_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
