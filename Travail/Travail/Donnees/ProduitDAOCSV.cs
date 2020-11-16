@@ -39,7 +39,7 @@ namespace Travail
                     string description = morceaux[2];
                     decimal prix = decimal.Parse(morceaux[3]);
 
-                    Produit produit = new Produit(numero, nom, description, prix);
+                    Produit produit = new Produit(numero, nom, description, prix, 0);
                     produits.Add(produit);
                 }
             }

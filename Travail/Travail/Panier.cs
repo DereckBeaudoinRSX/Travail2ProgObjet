@@ -8,27 +8,22 @@ namespace Travail
 {
 	public class Panier
 	{
-<<<<<<< HEAD
-
-		public List<Produit> Cart;
-=======
 		public IList<Produit> _cart { get; set; }
 
 		public Panier(IList<Produit> cart)
 		{
 			_cart = cart; 
 		}
->>>>>>> Fichier-Random
 
         public Panier()
         {
             _cart = new List<Produit>();
         }
 
-		public List<string> AfficherPanier()
+		/*public List<string> AfficherPanier()
 		{
-			return ToString(Cart);
-		}
+			return ToString(_cart);
+		}*/
 		
 		public double GetPrixTotal()
 		{
@@ -45,7 +40,7 @@ namespace Travail
 		private double CalculTotal()
 		{
 			double Resultat = 0; 
-			foreach (Produit item in Cart)
+			foreach (Produit item in _cart)
 			{
 				Resultat = Resultat + (0);  
 			}
