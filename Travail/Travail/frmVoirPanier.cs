@@ -21,7 +21,7 @@ namespace Travail
 
         private void frmVoirPanier_Load(object sender, EventArgs e)
         {
-            IList<Produit> items = panierDAO.GetAll(panier);
+            IList<Produit> items = panierDAO.GetAll();
             Panier panier = new Panier(items); 
             
             foreach (Produit item in items)
