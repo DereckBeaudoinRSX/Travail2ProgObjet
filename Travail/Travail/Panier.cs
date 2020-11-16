@@ -26,10 +26,8 @@ namespace Travail
 
 		public double GetPrixProduit(Produit item)
 		{
-			 return item.(Convert.ToDouble(item.Prix) * item.Quantite);
+			 return (Convert.ToDouble(item.Prix) * item.Quantite);
         }
-
-
 
 		private double CalculTotal()
 		{
@@ -54,7 +52,5 @@ namespace Travail
 		{
 			return item.Numero + " " + item.Nom + " " + item.Prix + " $";
 		}
-
-
 	}
 }
