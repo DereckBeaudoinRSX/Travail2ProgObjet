@@ -61,28 +61,28 @@
             // voirProduitsToolStripMenuItem
             // 
             this.voirProduitsToolStripMenuItem.Name = "voirProduitsToolStripMenuItem";
-            this.voirProduitsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.voirProduitsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.voirProduitsToolStripMenuItem.Text = "Voir produits";
             this.voirProduitsToolStripMenuItem.Click += new System.EventHandler(this.voirProduitsToolStripMenuItem_Click);
             // 
             // voirPanierToolStripMenuItem
             // 
             this.voirPanierToolStripMenuItem.Name = "voirPanierToolStripMenuItem";
-            this.voirPanierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.voirPanierToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.voirPanierToolStripMenuItem.Text = "Voir panier";
             this.voirPanierToolStripMenuItem.Click += new System.EventHandler(this.voirPanierToolStripMenuItem_Click);
             // 
             // voirProfileToolStripMenuItem
             // 
             this.voirProfileToolStripMenuItem.Name = "voirProfileToolStripMenuItem";
-            this.voirProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.voirProfileToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.voirProfileToolStripMenuItem.Text = "Voir profile";
             this.voirProfileToolStripMenuItem.Click += new System.EventHandler(this.voirProfileToolStripMenuItem_Click);
             // 
             // ajouterProduitToolStripMenuItem
             // 
             this.ajouterProduitToolStripMenuItem.Name = "ajouterProduitToolStripMenuItem";
-            this.ajouterProduitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ajouterProduitToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.ajouterProduitToolStripMenuItem.Text = "Ajouter produit";
             this.ajouterProduitToolStripMenuItem.Click += new System.EventHandler(this.ajouterProduitToolStripMenuItem_Click);
             // 
@@ -95,6 +95,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

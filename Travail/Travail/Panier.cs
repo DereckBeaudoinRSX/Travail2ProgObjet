@@ -23,7 +23,7 @@ namespace Travail
 
 		public double GetPrixProduit(Produit item)
 		{
-			 return item._prix * 
+			return 0;
 		}
 
 
@@ -33,7 +33,7 @@ namespace Travail
 			double Resultat = 0; 
 			foreach (Produit item in Cart)
 			{
-				Resultat = Resultat + (item._prix * );  
+				Resultat = Resultat + (0);  
 			}
 			return Math.Round(Resultat, 2); 
 		}
@@ -43,7 +43,7 @@ namespace Travail
 			List<string> Resultat = new List<string>(); 
 			foreach (Produit item in Cart)
 			{
-				Resultat.Add(item._nom + " " +  item._prix + "$ " + " " ); 
+				Resultat.Add(""); 
 			}
 			return Resultat;
 		} 
