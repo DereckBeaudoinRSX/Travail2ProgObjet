@@ -44,12 +44,33 @@ namespace Travail
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            utilisateurdao.Ajouter();
+            refresh();
+        }
+        private void refresh()
+        {
             IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
             if (utilisateurs[0].Role == "Client")
             {
                 ajouterProduitToolStripMenuItem.Visible = false;
             }
+            else if (utilisateurs[0].Role == "Administrateur")
+            {
+                ajouterProduitToolStripMenuItem.Visible = true;
+            }
+        }
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            refresh();
         }
     }
 }

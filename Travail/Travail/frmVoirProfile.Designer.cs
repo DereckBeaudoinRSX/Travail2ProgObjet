@@ -107,6 +107,7 @@
             this.Controls.Add(this.lblUserName);
             this.Name = "frmVoirProfile";
             this.Text = "frmVoirProfile";
+            this.Load += new System.EventHandler(this.frmVoirProfile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
