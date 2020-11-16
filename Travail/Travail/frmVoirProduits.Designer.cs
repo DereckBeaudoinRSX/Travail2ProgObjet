@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.LstProduits = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // LstProduits
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 12);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 426);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.LstProduits.FormattingEnabled = true;
+            this.LstProduits.Location = new System.Drawing.Point(13, 13);
+            this.LstProduits.Name = "LstProduits";
+            this.LstProduits.Size = new System.Drawing.Size(214, 420);
+            this.LstProduits.TabIndex = 0;
             // 
             // frmVoirProduits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(241, 450);
+            this.Controls.Add(this.LstProduits);
             this.Name = "frmVoirProduits";
             this.Text = "frmVoirProduits";
+            this.Load += new System.EventHandler(this.frmVoirProduits_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ListBox LstProduits;
     }
 }
