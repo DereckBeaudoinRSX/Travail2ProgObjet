@@ -16,33 +16,20 @@ namespace Travail
 			_cart = cart;
 		}
 
-		public List<string> AfficherPanier()
-		{
-			return ToString(_cart);
-		}
-
-		public double GetPrixTotal(Utilisateur utilisateur)
-		{
-			return CalculTotal(utilisateur);
-		}
-
-		public double GetPrixProduit(Produit item)
-		{
-			return Convert.ToDouble(item.Prix) * item.Quantite;
-		}
-
-		private double CalculTotal(Utilisateur utilisateur)
+		public double SousTotal()
 		{
 			double Resultat = 0;
 			foreach (Produit item in _cart)
 			{
-				Resultat = Resultat + (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));
+				Resultat += (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));
 			}
-			return Math.Round(Resultat, 2) * CalculTaxe(utilisateur);
+            return Math.Round(Resultat, 2);
 		}
-		private double CalculTaxe(Utilisateur utilisateur)
+
+		public double CalculTaxe(Utilisateur utilisateur)
 		{
 			double taxe;
+
 			if (utilisateur.Provenance == "Canada")
 			{
 				taxe = 1.15;
@@ -51,30 +38,18 @@ namespace Travail
 			{
 				taxe = 1.07;
 			}
+
 			return taxe;
 		}
 
-		private List<string> ToString(IList<Produit> Cart)
+		public List<string> ToString(IList<Produit> Cart)
 		{
 			List<string> Resultat = new List<string>();
 			foreach (Produit item in Cart)
 			{
-				Resultat.Add(item.Numero + " " + item.Nom + " " + item.Prix + " $");
+				Resultat.Add(item.Nom + " - " + item.Prix + "$ * " + item.Quantite + " = " + item.Prix * item.Quantite + "$");
 			}
 			return Resultat;
-		}
-		private string ToString(Produit item)
-		{
-			return item.Numero + " " + item.Nom + " " + item.Prix + " $";
-		}
-		private string GetSousTotalTaxe(Utilisateur utilisateur)
-		{
-			double Resultat = 0;
-			foreach (Produit item in _cart)
-			{
-				Resultat = Resultat + (Convert.ToDouble(item.Prix) * Convert.ToDouble(item.Quantite));
-			}
-			return (CalculTotal(utilisateur) - GetPrixTotal(utilisateur)).ToString();
 		}
 	}
 }

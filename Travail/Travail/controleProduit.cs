@@ -36,11 +36,11 @@ namespace Travail
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            
-            PanierDAO panierDAO = new PanierDAO();
             frmMenu menu = new frmMenu();
+            PanierDAO panierDAO = new PanierDAO();
             Produit produit = new Produit(_produit.Numero, _produit.Nom, _produit.Description, _produit.Prix, Convert.ToInt32(nudQuantite.Value));
-            panierDAO.Ajouter(produit);
+            panierDAO.Ajouter(menu.panier, produit);
+            nudQuantite.Value = 0;
         }
     }
 }

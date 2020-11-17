@@ -13,27 +13,27 @@ namespace Travail
 {
     public partial class frmVoirPanier : Form
     {
-        private PanierDAO panierDAO { get; }
-        public frmVoirPanier(PanierDAO panierDAO)
+        private IPanierDAO panierDAO { get; }
+
+        public frmVoirPanier(IPanierDAO panierDAO)
         {
             InitializeComponent();
             this.panierDAO = panierDAO;
         }
 
-        private void frmVoirPanier_Load(object sender, EventArgs e)
+        private void frmVoirPanier_Load_1(object sender, EventArgs e)
         {
+            frmMenu menu = new frmMenu();
+            IList<Produit> items = panierDAO.GetAll(menu.panier);
+            Panier panier = new Panier(items);
+            List<string> nomProduits = panier.ToString(items);
 
-        }
-
-        private void frmVoirPanier_Load(object sender, EventArgs e)
-        {
-            IList<Produit> items = panierDAO.GetAll();
-            Panier panier = new Panier(items); 
-            
-            foreach (Produit item in items)
+            for(int i = 0; i < panier._cart.Count; i++)
             {
-                lstProduits.Items.Add(items.ToString(item)); 
+                lstProduits.Items.Add(nomProduits[i]);
             }
+
+            lblSousTotal.Text += " " + panier.SousTotal() + "$";
         }
     }
 }

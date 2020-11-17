@@ -8,22 +8,19 @@ namespace Travail.ServiceApplicatif
 {
     public class PanierDAO : IPanierDAO
     {
-        frmMenu menu = new frmMenu();
-
-        public void Ajouter(Produit produit)
+        public void Ajouter(Panier panier, Produit produit)
         {
-            menu.panier._cart.Add(produit);
+            panier._cart.Add(produit);
         }
 
-        public IList<Produit> GetAll()
+        public IList<Produit> GetAll(Panier panier)
         {
             IList<Produit> produits = new List<Produit>();
 
-            for (int i = 0; i < menu.panier._cart.Count; i++)
+            for (int i = 0; i < panier._cart.Count; i++)
             {
-                produits.Add(menu.panier._cart[i]);
+                produits.Add(panier._cart[i]);
             }
-
             return produits;
         }
     }

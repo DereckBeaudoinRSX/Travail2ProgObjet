@@ -8,7 +8,7 @@ namespace Travail.ServiceApplicatif
 {
     public interface IPanierDAO
     {
-        void Ajouter(Produit produit);
-        IList<Produit> GetAll();
+        void Ajouter(Panier panier, Produit produit);
+        IList<Produit> GetAll(Panier panier);
     }
 }
