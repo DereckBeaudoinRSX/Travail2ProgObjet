@@ -34,6 +34,8 @@ namespace Travail
             }
 
             lblSousTotal.Text += " " + panier.SousTotal() + "$";
+            IUtilisateurDAO utilisateurDAO = new UtilisateurDAOCSV();
+            lblTaxe.Text = (panier.SousTotal() * panier.CalculTaxe(utilisateurDAO.GetUtilisateur())).ToString();
         }
     }
 }

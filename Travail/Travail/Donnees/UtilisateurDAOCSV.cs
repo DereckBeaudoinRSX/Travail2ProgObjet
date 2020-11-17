@@ -21,12 +21,13 @@ namespace Travail
                 writer.WriteLine(ligne);
             }
         }
-        public IList<Utilisateur> GetAll()
+        public Utilisateur GetUtilisateur()
         {
-            IList<Utilisateur> utilisateurs = new List<Utilisateur>();
+            Utilisateur utilisateur = new Utilisateur("a", "a", "a");
 
             using (StreamReader reader = new StreamReader(CheminCSV))
             {
+
                 while (!reader.EndOfStream)
                 {
                     string ligne = reader.ReadLine();
@@ -36,35 +37,25 @@ namespace Travail
                     string role = morceaux[1];
                     string provenance = morceaux[2];
 
-                    Utilisateur utilisateur = new Utilisateur(nom, role, provenance);
-                    utilisateurs.Add(utilisateur);
+                    utilisateur = new Utilisateur(nom, role, provenance);
                 }
             }
-            return utilisateurs;
+            return utilisateur;
         }
         public void Modifier(Utilisateur utilisateurAModifier)
         {
-            IList<Utilisateur> utilisateurs = GetAll();
-
-            for (int i = 0; i < utilisateurs.Count; i++)
-            {
-                if (utilisateurAModifier.Nom == utilisateurs[i].Nom)
-                {
-                    utilisateurs[i] = new Utilisateur(utilisateurAModifier);
-                }
-            }
+            Utilisateur utilisateur = GetUtilisateur();
+            utilisateur = new Utilisateur(utilisateurAModifier);
 
             File.WriteAllText(CheminCSV, "");
 
             using (StreamWriter writer = new StreamWriter(CheminCSV, false))
             {
-                foreach (Utilisateur utilisateur in utilisateurs)
-                {
-                    string ligne = utilisateur.Nom + ";" +
-                                   utilisateur.Role + ";" +
-                                   utilisateur.Provenance + ";";
-                    writer.WriteLine(ligne);
-                }
+                string ligne = utilisateur.Nom + ";" +
+                               utilisateur.Role + ";" +
+                               utilisateur.Provenance + ";";
+
+                writer.WriteLine(ligne);
             }
         }
     }

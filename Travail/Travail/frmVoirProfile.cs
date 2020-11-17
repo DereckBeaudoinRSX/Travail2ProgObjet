@@ -22,44 +22,44 @@ namespace Travail
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
-            string provenance = utilisateurs[0].Provenance;
+            Utilisateur utilisateur = utilisateurdao.GetUtilisateur();
+            string provenance = utilisateur.Provenance;
             string role = "Client";
-            Utilisateur utilisateur = new Utilisateur("JeanNezPleinlCasque", role, provenance);
-            utilisateurdao.Modifier(utilisateur);
+            Utilisateur nouveauUtilisateur = new Utilisateur("JeanNezPleinlCasque", role, provenance);
+            utilisateurdao.Modifier(nouveauUtilisateur);
         }
 
         private void btnAdministrateur_Click(object sender, EventArgs e)
         {
-            IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
-            string provenance = utilisateurs[0].Provenance;
+            Utilisateur utilisateur = utilisateurdao.GetUtilisateur();
+            string provenance = utilisateur.Provenance;
             string role = "Administrateur";
-            Utilisateur utilisateur = new Utilisateur("JeanNezPleinlCasque", role, provenance);
-            utilisateurdao.Modifier(utilisateur);
+            Utilisateur nouveauUtilisateur = new Utilisateur("JeanNezPleinlCasque", role, provenance);
+            utilisateurdao.Modifier(nouveauUtilisateur);
         }
 
         private void btnCanada_Click(object sender, EventArgs e)
         {
-            IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
+            Utilisateur utilisateur = utilisateurdao.GetUtilisateur();
             string provenance = "Canada";
-            string role = utilisateurs[0].Role;
-            Utilisateur utilisateur = new Utilisateur("JeanNezPleinlCasque", role, provenance);
-            utilisateurdao.Modifier(utilisateur);
+            string role = utilisateur.Role;
+            Utilisateur nouveauUtilisateur = new Utilisateur("JeanNezPleinlCasque", role, provenance);
+            utilisateurdao.Modifier(nouveauUtilisateur);
         }
 
         private void btnUSA_Click(object sender, EventArgs e)
         {
-            IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
+            Utilisateur utilisateur = utilisateurdao.GetUtilisateur();
             string provenance = "USA";
-            string role = utilisateurs[0].Role;
-            Utilisateur utilisateur = new Utilisateur("JeanNezPleinlCasque", role, provenance);
-            utilisateurdao.Modifier(utilisateur);
+            string role = utilisateur.Role;
+            Utilisateur nouveauUtilisateur = new Utilisateur("JeanNezPleinlCasque", role, provenance);
+            utilisateurdao.Modifier(nouveauUtilisateur);
         }
 
         private void frmVoirProfile_Load(object sender, EventArgs e)
         {
-            IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
-            lblUserName.Text = utilisateurs[0].Nom;
+            Utilisateur utilisateur = utilisateurdao.GetUtilisateur();
+            lblUserName.Text = utilisateur.Nom;
         }
     }
 }

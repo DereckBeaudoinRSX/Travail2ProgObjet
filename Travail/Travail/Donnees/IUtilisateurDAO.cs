@@ -10,7 +10,7 @@ namespace Travail
     public interface IUtilisateurDAO
     {
         void Ajouter();
-        IList<Utilisateur> GetAll();
+        Utilisateur GetUtilisateur();
         void Modifier(Utilisateur utilisateur);
     }
 }

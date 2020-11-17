@@ -32,11 +32,11 @@ namespace Travail
 
 			if (utilisateur.Provenance == "Canada")
 			{
-				taxe = 1.15;
+				taxe = 0.15;
 			}
 			else
 			{
-				taxe = 1.07;
+				taxe = 0.07;
 			}
 
 			return taxe;

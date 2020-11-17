@@ -80,12 +80,12 @@ namespace Travail
 
         private void refresh()
         {
-            IList<Utilisateur> utilisateurs = utilisateurdao.GetAll();
-            if (utilisateurs[0].Role == "Client")
+            Utilisateur utilisateur = utilisateurdao.GetUtilisateur();
+            if (utilisateur.Role == "Client")
             {
                 ajouterProduitToolStripMenuItem.Visible = false;
             }
-            else if (utilisateurs[0].Role == "Administrateur")
+            else if (utilisateur.Role == "Administrateur")
             {
                 ajouterProduitToolStripMenuItem.Visible = true;
             }
