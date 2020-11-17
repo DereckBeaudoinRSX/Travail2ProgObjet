@@ -35,7 +35,11 @@ namespace Travail
 
             lblSousTotal.Text += " " + panier.SousTotal() + "$";
             IUtilisateurDAO utilisateurDAO = new UtilisateurDAOCSV();
-            lblTaxe.Text = (panier.SousTotal() * panier.CalculTaxe(utilisateurDAO.GetUtilisateur())).ToString();
+            double taxe = Math.Round(panier.SousTotal() * panier.CalculTaxe(utilisateurDAO.GetUtilisateur()), 2);
+            double fraisLivraison = Math.Round(Convert.ToDouble(panier.DeciderFraisLivraison(utilisateurDAO.GetUtilisateur())), 2);
+            lblTaxe.Text += taxe.ToString() + "$";
+            LblLivraison.Text += fraisLivraison.ToString() + "$";
+            LblTotal.Text += (panier.SousTotal() + taxe + fraisLivraison).ToString() + "$";
         }
     }
 }

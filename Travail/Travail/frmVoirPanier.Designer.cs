@@ -85,9 +85,9 @@
             this.LblTotal.AutoSize = true;
             this.LblTotal.Location = new System.Drawing.Point(350, 120);
             this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(37, 13);
+            this.LblTotal.Size = new System.Drawing.Size(40, 13);
             this.LblTotal.TabIndex = 5;
-            this.LblTotal.Text = "Total :";
+            this.LblTotal.Text = "Total : ";
             // 
             // frmVoirPanier
             // 

@@ -28,19 +28,27 @@ namespace Travail
 
 		public double CalculTaxe(Utilisateur utilisateur)
 		{
-			double taxe;
+			double taxe = 0.15;
 
-			if (utilisateur.Provenance == "Canada")
-			{
-				taxe = 0.15;
-			}
-			else
+			if (utilisateur.Provenance != "Canada")
 			{
 				taxe = 0.07;
 			}
 
 			return taxe;
 		}
+
+        public int DeciderFraisLivraison(Utilisateur utilisateur)
+        {
+            int frais = 0;
+
+            if (utilisateur.Provenance != "Canada")
+            {
+                frais = 15;
+            }
+
+            return frais;
+        }
 
 		public List<string> ToString(IList<Produit> Cart)
 		{

@@ -40,12 +40,12 @@ namespace Travail
                     utilisateur = new Utilisateur(nom, role, provenance);
                 }
             }
+
             return utilisateur;
         }
         public void Modifier(Utilisateur utilisateurAModifier)
         {
-            Utilisateur utilisateur = GetUtilisateur();
-            utilisateur = new Utilisateur(utilisateurAModifier);
+            Utilisateur utilisateur = new Utilisateur(utilisateurAModifier);
 
             File.WriteAllText(CheminCSV, "");
 
